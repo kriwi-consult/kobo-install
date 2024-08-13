@@ -31,7 +31,7 @@ class Config(metaclass=Singleton):
     DEFAULT_PROXY_PORT = '8080'
     DEFAULT_NGINX_PORT = '80'
     DEFAULT_NGINX_HTTPS_PORT = '443'
-    KOBO_DOCKER_BRANCH = '2.024.19c'
+    KOBO_DOCKER_BRANCH = 'master'
     KOBO_INSTALL_VERSION = '8.2.1'
     MAXIMUM_AWS_CREDENTIAL_ATTEMPTS = 3
     ALLOWED_PASSWORD_CHARACTERS = (
@@ -354,6 +354,7 @@ class Config(metaclass=Singleton):
             'kpi_raven': '',
             'kpi_raven_js': '',
             'kpi_subdomain': 'kf',
+            'bmis_subdomain': 'bmis',
             'local_installation': False,
             'local_interface': Network.get_primary_interface(),
             'local_interface_ip': primary_ip,
@@ -1801,6 +1802,11 @@ class Config(metaclass=Singleton):
             'Enketo Express sub domain name?',
             CLI.COLOR_QUESTION,
             self.__dict['ee_subdomain']
+        )
+        self.__dict['bmis_subdomain'] = CLI.colored_input(
+            'BMIS sub domain name?',
+            CLI.COLOR_QUESTION,
+            self.__dict['bmis_subdomain']
         )
 
         parts = self.__dict['public_domain_name'].split('.')

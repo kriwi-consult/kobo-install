@@ -25,13 +25,12 @@ class Setup:
             # Move unique id file to /tmp in order to clone without errors
             # (e.g. not empty directory)
             tmp_dirpath = tempfile.mkdtemp()
-            shutil.move(os.path.join(dict_['kobodocker_path'],
-                                     Config.UNIQUE_ID_FILE),
+            shutil.move(os.path.join(dict_['kobodocker_path'], Config.UNIQUE_ID_FILE),
                         os.path.join(tmp_dirpath, Config.UNIQUE_ID_FILE))
 
             # clone project
             git_command = [
-                'git', 'clone', 'https://github.com/kobotoolbox/kobo-docker',
+                'git', 'clone', 'https://github.com/kriwi-consult/kobo-docker',
                 dict_['kobodocker_path']
             ]
             CLI.run_command(git_command, cwd=os.path.dirname(
@@ -139,7 +138,8 @@ class Setup:
                 f"{dict_['local_interface_ip']}  "
                 f"{dict_['kpi_subdomain']}.{public_domain_name} "
                 f"{dict_['kc_subdomain']}.{public_domain_name} "
-                f"{dict_['ee_subdomain']}.{public_domain_name}"
+                f"{dict_['ee_subdomain']}.{public_domain_name} "
+                f"{dict_['bmis_subdomain']}.{public_domain_name}"
             )
 
             bof = tmp_host.strip()

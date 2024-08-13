@@ -169,6 +169,7 @@ class Template:
             'PRIVATE_DOMAIN_NAME': dict_['private_domain_name'],
             'PUBLIC_DOMAIN_NAME': dict_['public_domain_name'],
             'KOBOFORM_SUBDOMAIN': dict_['kpi_subdomain'],
+            'BMIS_SUBDOMAIN': dict_['bmis_subdomain'],
             'KOBOCAT_SUBDOMAIN': dict_['kc_subdomain'],
             'ENKETO_SUBDOMAIN': dict_['ee_subdomain'],
             'KOBO_SUPERUSER_USERNAME': dict_['super_user_username'],
