@@ -66,7 +66,8 @@ services:
     ${USE_BACKEND_NETWORK}      - kpi.docker.container
 
   bmis:
-    command: "uwsgi --ini uwsgi.ini"
+    #command: "uwsgi --ini uwsgi.ini"
+    command: python manage.py runserver 0.0.0.0:8000
     ${USE_EXTRA_HOSTS}extra_hosts:
     ${USE_FAKE_DNS}  - ${KOBOFORM_SUBDOMAIN}.${PUBLIC_DOMAIN_NAME}:${LOCAL_INTERFACE_IP}
     ${USE_FAKE_DNS}  - ${KOBOCAT_SUBDOMAIN}.${PUBLIC_DOMAIN_NAME}:${LOCAL_INTERFACE_IP}

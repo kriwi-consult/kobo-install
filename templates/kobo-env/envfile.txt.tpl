@@ -13,7 +13,7 @@ INTERNAL_DOMAIN_NAME=${INTERNAL_DOMAIN_NAME}
 KOBOFORM_PUBLIC_SUBDOMAIN=${KOBOFORM_SUBDOMAIN}
 # The publicly-accessible subdomain for the KoBoCAT data collection and project management interface (e.g.kobocat).
 KOBOCAT_PUBLIC_SUBDOMAIN=${KOBOCAT_SUBDOMAIN}
-# The publicly-accessible subdomain for the Digital Profile interface.
+# The publicly-accessible subdomain for the BMIS interface.
 BMIS_PUBLIC_SUBDOMAIN=${BMIS_SUBDOMAIN}
 # The publicly-accessible subdomain for the Enketo Express web forms (e.g. enketo).
 ENKETO_EXPRESS_PUBLIC_SUBDOMAIN=${ENKETO_SUBDOMAIN}
